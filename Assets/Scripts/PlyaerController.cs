@@ -6,10 +6,21 @@ using UnityEngine.UI;
 public class PlyaerController : MonoBehaviour
 {
     public float jumpForce = 2.0f;
+<<<<<<< HEAD
+    public bool isGrounded;
+    public bool isMagnetic;
+    public bool shield;
+    public GameObject gameover;
+    public Rigidbody2D rb;
+    public bool dead, gameStart, canJump;
+    public GameObject bottomCollider;
+    public GameObject starMagnet;
+=======
     public bool isGrounded,shield;
     public GameObject gameover;     public Rigidbody2D rb;
     public bool dead,gameStart,canJump;
     public GameObject bottomCollider;
+>>>>>>> 333d98b91d82e43d860f9b9e845f2bd842231ea7
     public GameSuccess gs;
     private Vector3 jumpDirection;
     public int currentStar;
@@ -26,6 +37,7 @@ public class PlyaerController : MonoBehaviour
         gameStart = false;
         shield = false;
         canJump = true;
+        isMagnetic = false;
         rb.gravityScale = 0;
         currentStar = 0;
         source = GetComponent<AudioSource>();
@@ -35,6 +47,24 @@ public class PlyaerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
+        if(isMagnetic){
+            starMagnet.transform.position = new Vector2 (transform.position.x, transform.position.y);
+        }else{
+            starMagnet.transform.position = new Vector2 (1920, 1080);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            if (gameStart)
+            {
+                if (isGrounded && !dead && canJump)
+                {
+                    jumpBall();
+                }
+
+
+=======
         if (Input.GetKeyDown(KeyCode.Space)||Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Began)
         {
             if (gameStart)
@@ -48,6 +78,7 @@ public class PlyaerController : MonoBehaviour
                 }
 
           
+>>>>>>> 333d98b91d82e43d860f9b9e845f2bd842231ea7
             }
             else
             {
@@ -56,7 +87,11 @@ public class PlyaerController : MonoBehaviour
             }
 
         }
+<<<<<<< HEAD
+        if (this.gameObject.name != "controller")
+=======
         if(this.gameObject.name != "controller")
+>>>>>>> 333d98b91d82e43d860f9b9e845f2bd842231ea7
         {
             if (transform.position.x < -5 || transform.position.x > 5 || transform.position.y < -5 && !gs.ended)
             {
@@ -71,8 +106,18 @@ public class PlyaerController : MonoBehaviour
 
             }
         }
-       
 
+<<<<<<< HEAD
+
+    }
+    public void jumpBall()
+    {
+        source.PlayOneShot(jump, 1);
+        rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
+        isGrounded = false;
+        canJump = false;
+=======
+>>>>>>> 333d98b91d82e43d860f9b9e845f2bd842231ea7
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -91,7 +136,11 @@ public class PlyaerController : MonoBehaviour
                 isGrounded = true;
                 canJump = true;
             }
+<<<<<<< HEAD
+
+=======
            
+>>>>>>> 333d98b91d82e43d860f9b9e845f2bd842231ea7
 
         }
 
@@ -114,7 +163,11 @@ public class PlyaerController : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D col)
     {
+<<<<<<< HEAD
+        if (col.gameObject.tag == "stick" || col.gameObject.tag == "floor")
+=======
         if (col.gameObject.tag == "stick"|| col.gameObject.tag == "floor")
+>>>>>>> 333d98b91d82e43d860f9b9e845f2bd842231ea7
         {
             isGrounded = true;
         }
@@ -122,6 +175,8 @@ public class PlyaerController : MonoBehaviour
     IEnumerator delayjump()
     {
         yield return new WaitForSeconds(0.3f);
+<<<<<<< HEAD
+=======
         isGrounded = false;
     }
 
@@ -137,8 +192,19 @@ public class PlyaerController : MonoBehaviour
     {
         source.PlayOneShot(jump, 1);
         rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
+>>>>>>> 333d98b91d82e43d860f9b9e845f2bd842231ea7
         isGrounded = false;
         canJump = false;
     }
 
+    public void buttonhandler(){
+        isMagnetic = !isMagnetic;
+    }
+    public void bubblePowerUp()
+    {
+        Debug.Log("shield activated");
+        shield = !shield;
+
+        //gameObject.SetActive(false);
+    }
 }
