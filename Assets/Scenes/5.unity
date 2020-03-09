@@ -705,11 +705,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 187225877574413096, guid: 8624ca4448b534e3bbb597969218562e,
-        type: 3}
-      propertyPath: m_Text
-      value: Restart
-      objectReference: {fileID: 0}
     - target: {fileID: 187225877700375786, guid: 8624ca4448b534e3bbb597969218562e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -729,6 +724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 336
+      objectReference: {fileID: 0}
+    - target: {fileID: 187225877574413096, guid: 8624ca4448b534e3bbb597969218562e,
+        type: 3}
+      propertyPath: m_Text
+      value: Restart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8624ca4448b534e3bbb597969218562e, type: 3}
@@ -2985,6 +2985,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 495
       objectReference: {fileID: 0}
+    - target: {fileID: 6486293930918828518, guid: 2257125b6b0934e30914b4bcf1ce2c0f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 428610519}
+    - target: {fileID: 6486293930918828518, guid: 2257125b6b0934e30914b4bcf1ce2c0f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: bubblePowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486293930918828518, guid: 2257125b6b0934e30914b4bcf1ce2c0f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2257125b6b0934e30914b4bcf1ce2c0f, type: 3}
 --- !u!1001 &1155995805
@@ -3724,6 +3739,21 @@ PrefabInstance:
       propertyPath: shootSound
       value: 
       objectReference: {fileID: 8300000, guid: b8019cb978ab547f6b81fb121fce59f4, type: 3}
+    - target: {fileID: 2806643949351235355, guid: 0a9db3f01ca44421799691e9674ba1bf,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806643949351235355, guid: 0a9db3f01ca44421799691e9674ba1bf,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806643949351235355, guid: 0a9db3f01ca44421799691e9674ba1bf,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8708913227684530066, guid: 0a9db3f01ca44421799691e9674ba1bf,
         type: 3}
       propertyPath: m_Sprite
@@ -3764,21 +3794,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2806643949351235355, guid: 0a9db3f01ca44421799691e9674ba1bf,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 2806643949351235355, guid: 0a9db3f01ca44421799691e9674ba1bf,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2806643949351235355, guid: 0a9db3f01ca44421799691e9674ba1bf,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.drawMode
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a9db3f01ca44421799691e9674ba1bf, type: 3}
