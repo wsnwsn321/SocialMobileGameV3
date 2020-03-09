@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlyaerController : MonoBehaviour
 {
     public float jumpForce = 2.0f;
-    public bool isGrounded;
+    public bool isGrounded,shield;
     public GameObject gameover;     public Rigidbody2D rb;
     public bool dead,gameStart,canJump;
     public GameObject bottomCollider;
@@ -24,6 +24,7 @@ public class PlyaerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         dead = false;
         gameStart = false;
+        shield = false;
         canJump = true;
         rb.gravityScale = 0;
         currentStar = 0;
@@ -122,6 +123,22 @@ public class PlyaerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         isGrounded = false;
+    }
+
+    public void bubblePowerUp()
+    {
+        Debug.Log("shield activated");
+        shield = !shield;
+
+        //gameObject.SetActive(false);
+    }
+
+    public void jumpBall()
+    {
+        source.PlayOneShot(jump, 1);
+        rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
+        isGrounded = false;
+        canJump = false;
     }
 
 }
