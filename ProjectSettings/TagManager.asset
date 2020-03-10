@@ -9,6 +9,7 @@ TagManager:
   - lady
   - switch
   - floor
+  - spinning circle
   layers:
   - Default
   - TransparentFX

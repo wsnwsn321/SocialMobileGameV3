@@ -21,10 +21,6 @@ public class SpikeDead : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-        Debug.Log(player.shield);
-=======
->>>>>>> 333d98b91d82e43d860f9b9e845f2bd842231ea7
     }
 
     void OnCollisionEnter2D(Collision2D col)
