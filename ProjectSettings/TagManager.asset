@@ -11,6 +11,7 @@ TagManager:
   - floor
   - spinning circle
   - spike
+  - DoNotDestroy
   layers:
   - Default
   - TransparentFX
