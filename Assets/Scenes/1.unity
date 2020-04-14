@@ -672,6 +672,11 @@ PrefabInstance:
       propertyPath: starMagnet
       value: 
       objectReference: {fileID: 1398252950}
+    - target: {fileID: 2246993904780321061, guid: 34ccbcd29939342b5a07b7c76ec75a53,
+        type: 3}
+      propertyPath: currentStar
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ccbcd29939342b5a07b7c76ec75a53, type: 3}
 --- !u!1001 &1250799475
@@ -946,7 +951,7 @@ PrefabInstance:
     - target: {fileID: 4950038959577485451, guid: 2257125b6b0934e30914b4bcf1ce2c0f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4950038959577485451, guid: 2257125b6b0934e30914b4bcf1ce2c0f,
         type: 3}
