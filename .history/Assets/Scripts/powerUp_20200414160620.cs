@@ -25,9 +25,9 @@ public class powerUp : MonoBehaviour
             gravityBtn.interactable = false;
         }
         if(PlayerPrefs.GetInt("slow") == 1){
-            slowBtn.interactable = true;
+            timeBtn.interactable = true;
         }else{
-            slowBtn.interactable = false;
+            timeBtn.interactable = false;
         }
         if(PlayerPrefs.GetInt("shield") == 1){
             shieldBtn.interactable = true;

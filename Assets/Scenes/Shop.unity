@@ -2503,8 +2503,8 @@ MonoBehaviour:
   slowTog: {fileID: 1357667444}
   magnetBtn: {fileID: 1840436154}
   gravityBtn: {fileID: 503684665}
-  slowBtn: {fileID: 10949551}
-  shieldBtn: {fileID: 347726156}
+  slowBtn: {fileID: 347726156}
+  shieldBtn: {fileID: 10949551}
   purchaseBtn: {fileID: 1288836969}
   coin: {fileID: 1298358993}
   isMagnet: 0
