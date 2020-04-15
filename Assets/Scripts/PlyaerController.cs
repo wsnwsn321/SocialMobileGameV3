@@ -22,8 +22,6 @@ public class PlyaerController : MonoBehaviour
     public AudioClip jump;
     public AudioClip sw;
     public AudioClip lose;
-    [SerializeField]
-    private UnlockLevels script;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,13 +41,10 @@ public class PlyaerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isMagnetic)
-        {
-            starMagnet.transform.position = new Vector2(transform.position.x, transform.position.y);
-        }
-        else
-        {
-            starMagnet.transform.position = new Vector2(1920, 1080);
+        if(isMagnetic){
+            starMagnet.transform.position = new Vector2 (transform.position.x, transform.position.y);
+        }else{
+            starMagnet.transform.position = new Vector2 (1920, 1080);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -102,7 +97,6 @@ public class PlyaerController : MonoBehaviour
             currentStar++;
             Destroy(col.gameObject);
             source.PlayOneShot(shootSound, 1);
-            script.callStarCollected();
         }
 
         if (col.gameObject.tag == "stick" || col.gameObject.tag == "floor")
@@ -147,8 +141,7 @@ public class PlyaerController : MonoBehaviour
         isGrounded = false;
     }
 
-    public void buttonhandler()
-    {
+    public void buttonhandler(){
         isMagnetic = !isMagnetic;
     }
     public void bubblePowerUp()
