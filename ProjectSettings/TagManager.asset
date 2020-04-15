@@ -10,6 +10,8 @@ TagManager:
   - switch
   - floor
   - spinning circle
+  - spike
+  - DoNotDestroy
   layers:
   - Default
   - TransparentFX
