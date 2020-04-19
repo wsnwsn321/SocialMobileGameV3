@@ -30,16 +30,11 @@ public class GameSuccess : MonoBehaviour
         {
             player.dead = true;
             ended = true;
-            if (player.currentStar == totalStar)
-            {
-                success.SetActive(true);
-                source.PlayOneShot(win, 1);
-            }
-            else
-            {
-                fail.SetActive(true);
-                source.PlayOneShot(lose, 1);
-            }
+            
+            success.SetActive(true);
+            source.PlayOneShot(win, 1);
+            
+            
 
         }
     }

@@ -33,21 +33,22 @@ public class UnlockLevel : MonoBehaviour
     private void OnSceneLoaded(Scene aScene, LoadSceneMode aMode)
     {
         scene = aScene;
-        if (aScene.name == "OptionMenu")
+        if (aScene.name == "OptionMenu")// unlock and lock levels
         {
             lvlButtons = FindObjectsOfType<Button>();
-            foreach (Button btn in lvlButtons)
+            foreach (Button btn in lvlButtons) //iterate over buttons
             {
                 string name = btn.name.Substring(5);
                 int lvl = Int32.Parse(name);
                 if (totalHearts < heartsNeeded[lvl - 1])
                 {
-                    btn.GetComponent<Button>().enabled = false;
+                    // change the button to inactive in here
+                    btn.GetComponent<Button>().interactable = false;
                 }
 
             }
         }
-        else
+        else // playable level
         {
             try
             {
@@ -75,6 +76,7 @@ public class UnlockLevel : MonoBehaviour
     }
     public void endlevel()
     {
+        Debug.Log(heartCount);
         if (heartCount > heartsHunted[Int32.Parse(scene.name) - 1])
         {
             heartsHunted[Int32.Parse(scene.name) - 1] = heartCount;
