@@ -32,6 +32,10 @@ public class UnlockLevel : MonoBehaviour
 
     private void OnSceneLoaded(Scene aScene, LoadSceneMode aMode)
     {
+        foreach (int x in heartsHunted)
+        {
+            totalHearts += x;
+        }
         scene = aScene;
         if (aScene.name == "OptionMenu")// unlock and lock levels
         {
