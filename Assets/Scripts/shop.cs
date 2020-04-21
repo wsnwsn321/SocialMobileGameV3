@@ -29,7 +29,7 @@ public class shop : MonoBehaviour
     void Start()
     {
         coinNum = PlayerPrefs.GetInt("coin");
-        coinNum = 5;// this is used for testing and make sure user could get coin to buy the power
+        //coinNum = 5;// this is used for testing and make sure user could get coin to buy the power
         coin.text = "x" + coinNum;
         if(PlayerPrefs.GetInt("magnet")==1){
             magnetBtn.interactable = false;

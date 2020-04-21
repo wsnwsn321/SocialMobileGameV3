@@ -85,6 +85,9 @@ public class UnlockLevel : MonoBehaviour
         {
             heartsHunted[Int32.Parse(scene.name) - 1] = heartCount;
         }
+        int rewardCoin  = heartCount;//this is used to count the reward coin
+        int coin = PlayerPrefs.GetInt("coin") + rewardCoin;
+        PlayerPrefs.SetInt("coin", coin);
     }
     public void newGame()
     {
