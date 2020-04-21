@@ -31,4 +31,13 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(PlayerPrefs.GetString("preScene")); // loads prevoius scene
     }
 
+    public void ArchiveClear()
+    {
+        PlayerPrefs.SetInt("coin", 0);
+        PlayerPrefs.SetInt("magnet", 0);
+        PlayerPrefs.SetInt("gravity", 0);
+        PlayerPrefs.SetInt("shield", 0);
+        PlayerPrefs.SetInt("slow", 0);
+    }
+
 }
