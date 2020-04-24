@@ -38,7 +38,7 @@ public class shop : MonoBehaviour
             gravityBtn.interactable = false;
         }
         if(PlayerPrefs.GetInt("shield")==1){
-            Debug.Log("shield");
+            //Debug.Log("shield");
             shieldBtn.interactable = false;
         }
         if(PlayerPrefs.GetInt("slow")==1){
