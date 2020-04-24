@@ -32,6 +32,7 @@ public class UnlockLevel : MonoBehaviour
 
     private void OnSceneLoaded(Scene aScene, LoadSceneMode aMode)
     {
+        totalHearts =0;
         foreach (int x in heartsHunted)
         {
             totalHearts += x;
